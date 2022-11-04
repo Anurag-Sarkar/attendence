@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/holiday.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+  <div id="main">
+
+    <div id="nav">
+      <h2>SHERYIANS</h2>
+      <div id="buttons">
+        <h4>Add Member</h4>
+        <h4>Add Holiday</h4>
+      </div>
+    </div>
+    <div id="holiday">
+      <div id="allholiday">
+        <h2>Dojo Holiday</h2>
+        <form action="/allholiday" method="post">
+          <div id="start">
+            <label for="start">Start Date</label>
+            <input id="start" name="start" type="date">
+          </div>
+          <div id="end">
+            <label for="end">End Date</label>
+            <input id="end" name="end" type="date">
+            <button type="submit">Add Holiday</button>
+          </div>
+          <p>* to mark single holiday only assign start date</p>
+        </form>
+      </div>
+
+      <div id="personelholiday">
+        <h2>Personal Holiday</h2>
+        <form action="/userholiday" method="post">
+
+          <div id="start">
+            <label for="start">Start Date</label>
+            <input id="start" name="start" type="date">
+          </div>
+
+          <div id="end">
+            <label for="end">End Date</label>
+            <input id="end" name="end" type="date">
+            <button type="submit">Add Holiday</button>
+          </div>
+          <p>* to mark single holiday only assign start date</p>
+
+        </form>
+      </div>
+    </div>
+  </div>
+    
+</body>
+  </html>

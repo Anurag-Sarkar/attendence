@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    
+    <div id="main">
+        
+        <div id="nav">
+            <h2>SHERYIANS</h2>
+            <div id="buttons">
+                <a href="/add"><h4>Add Member</h4></a>
+                <a href="/holiday"><h4 id="holiday">Add Holiday</h4></a>
+            </div>
+            <i class="ri-menu-4-fill"></i>
+        </div>
+        <div id="time">
+            <div id="heading">
+                <p>Name</p>
+                <p>Entry</p>
+                <p>Exit</p>
+                <p>Date</p>
+            </div>
+            <div id="details">
+                <div id="person">
+                    <p>a</p>  
+                    <p>a</p>  
+                    <p>a</p>  
+                    <p>a</p>  
+                  </div>
+                {%for user in data%}  
+                <div id="person">
+                  <p>{{user.name}}</p>  
+                  <p>{{user.entry}}</p>  
+                  <p>{{user.exit}}</p>  
+                  <p>{{user.date}}</p>  
+                </div>
+                  {%endfor%}
+            </div>
+        </div>
+        <div id="footer">
+            <h4>Developed By Anurag Sarkar</h4>
+            <p>Older Data</p>
+        </div>
+    </div>
+    <div id="o">
+        <i class="ri-close-fill"></i>
+        <div id="butt">
+            <a href="/add"><h4>Add Member</h4></a>
+            <a href="/holiday"><h4 id="holiday">Add Holiday</h4></a>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.3/socket.io.js" integrity="sha512-iWPnCISAd/J+ZacwV2mbNLCaPGRrRo5OS81lKTVPtRg1wGTC20Cfmp5Us5RcbLv42QLdbAWl0MI57yox5VecQg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{{ url_for('static',filename='js/index.js') }}"></script>
+</body>
+</html>

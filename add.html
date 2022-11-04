@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/add.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <div id="main">
+        <div id="nav">
+            <h2>SHERYIANS</h2>
+            <div id="buttons">
+                <h4>Add Member</h4>
+                <h4>Add Holiday</h4>
+            </div>
+        </div>
+        <div id="box">
+            <form action="/addmember" method="post">
+                <input type="text" placeholder="Enter name" name="name" required>
+                <div id="button">
+                    <button>Add Fingerprint</button>
+                    <button id="submit" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
